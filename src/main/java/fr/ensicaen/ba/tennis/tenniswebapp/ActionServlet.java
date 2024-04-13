@@ -24,42 +24,40 @@ public class ActionServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         if(session == null) {
             if (action.equals("L")) {
-                _dispatcher = request.getRequestDispatcher("login-servlet");
-                _dispatcher.forward(request,response);
-
+                forward(request, response,"/login-servlet");
             } else {
-                _dispatcher = request.getRequestDispatcher("/Login.html");
-                _dispatcher.forward(request,response);
+                forward(request, response,"/Login.html");
+
             }
         } else {
             switch (action) {
                 case "L":
                     if (!email.equals(session.getAttribute("email"))) {
-                        _dispatcher = request.getRequestDispatcher("/errorPage.html");
-                        _dispatcher.forward(request, response);
+                        forward(request, response,"/errorPage.html");
                     } else {
-                        _dispatcher = request.getRequestDispatcher("login-servlet");
-                        _dispatcher.forward(request, response);
+                        forward(request, response,"login-servlet");
                     }
                     break;
                 case "A":
                     String unsignedTournament = request.getParameter("unsignedTournament");
                     request.setAttribute("unsignedTournament", unsignedTournament);
-                    _dispatcher = request.getRequestDispatcher("adherent-servlet");
-                    _dispatcher.forward(request, response);
+                    forward(request, response,"adherent-servlet");
                     break;
                 case "I":
                     String codeTournoi = request.getParameter("codeTournoi");
                     request.setAttribute("codeTournoi", codeTournoi);
-                    _dispatcher = request.getRequestDispatcher("inscription-servlet");
-                    _dispatcher.forward(request, response);
+                    forward(request, response,"inscription-servlet");
                     break;
                 default:
-                    _dispatcher = request.getRequestDispatcher("/Menu.jsp");
-                    _dispatcher.forward(request, response);
+                    forward(request,response,"/Menu.jsp");
                     break;
             }
         }
+    }
+
+    private void forward(HttpServletRequest request, HttpServletResponse response, String page) throws ServletException, IOException {
+        _dispatcher = request.getRequestDispatcher(page);
+        _dispatcher.forward(request, response);
     }
 
     public void destroy() {
