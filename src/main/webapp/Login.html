@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles/Login_style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1> Login </h1>
+    <div class="container">
+        <form id="loginForm" method="post" action="action-servlet">
+            <input type="email" id="email" name="email" placeholder="abc@xyz.com" required> <br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <input type="hidden" name="codeName" value="L">
+            <p id="error-message"></p>
+            <input type="submit" id="submit" value="Validation" onclick="submitForm()"><br>
+        </form>
+    </div>
+</body>
+    <script>
+        function submitForm() {
+            document.getElementById("loginForm").submit();
+        }
+        function enterPressed(event) {
+            if (event.keyCode === 13) {
+                submitForm();
+            }
+        }
+        function getURLParameter(name) {
+            return decodeURIComponent((
+            new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)
+                ||[,""])[1].replace(/\+/g, '%20'))||null;
+        }
+        window.onload = function() {
+            var errorMessage = getURLParameter('error');
+            if(errorMessage) {
+                var error = document.getElementById("error-message");
+                error.innerText = errorMessage;
+            }
+        }
+    </script>
+</html>

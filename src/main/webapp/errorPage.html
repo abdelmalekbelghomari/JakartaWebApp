@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Erreur de Session</title>
+    <link rel="stylesheet" href="styles/errorPage_style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Erreur de Session</h1>
+    <p>Il semble que vous soyez déjà connecté avec un autre compte email. Pour continuer, veuillez d'abord vous déconnecter de la session actuelle.</p>
+    <a href="Menu.jsp">Retour au Menu</a>
+    <form method="post" action="disconnect-servlet">
+        <input type="submit" value="Déconnexion" />
+    </form>
+</div>
+</body>
+</html>

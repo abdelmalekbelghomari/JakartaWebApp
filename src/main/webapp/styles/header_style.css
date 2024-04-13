@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Ensures font consistency across the site */
+}
+.header {
+    background-image: url('../images/gif_raquette.webp');
+    background-position: center;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative; /* Needed for positioning the menu button */
+}
+.header-h1 {
+    margin: 0;
+    color: #2895fe;
+}
+.header-p {
+    font-size: 16px;
+    color: whitesmoke;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 10px 20px;
+    text-align: justify;
+}
+#home-button {
+    position: absolute; /* Absolute positioning relative to the header */
+    right: 20px; /* Aligns the button to the right */
+    top: 10px; /* Positions the button from the top */
+}
+#home-button input[type="submit"] {
+    background-color: #2895fe; /* Blue color to match the header */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#home-button input[type="submit"]:hover {
+    background-color: #1a68b0; /* Darker blue on hover for better interaction */
+}

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+h1 {
+    color: #5A5A5A;
+    text-align: center;
+}
+.message {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    width: 50%;
+    text-align: center;
+}
+.success {
+    background-color: #c8e6c9; /* Green background for success */
+}
+.failure {
+    background-color: #ffcdd2; /* Red background for failure */
+}
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

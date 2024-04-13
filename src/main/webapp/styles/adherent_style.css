@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Couleur de texte générale pour une meilleure lisibilité */
+}
+h2 {
+    color: #2a6041; /* Vert sombre pour le titre */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px; /* Ajoute un espace entre le titre et la table */
+}
+.info-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Deux colonnes de largeur automatique */
+    max-width: 600px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    gap: 10px 20px; /* Espacement entre les lignes et les colonnes */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+.info-label {
+    text-align: left; /* Alignement à droite pour les étiquettes */
+    padding-right: 10px; /* Un peu d'espace avant la colonne des valeurs */
+    font-weight: bold; /* Rend les étiquettes en gras */
+}
+.info-value {
+    text-align: left; /* Alignement à gauche pour les valeurs */
+}
+table {
+    width: 80%;
+    margin: 20px auto; /* Centre la table avec un peu d'espace en haut et en bas */
+    border-collapse: collapse; /* Élimine l'espace entre les bordures des cellules */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ajoute une légère ombre sous la table pour un effet de profondeur */
+}
+th, td {
+    padding: 12px 15px; /* Espacement interne un peu plus généreux pour une meilleure lecture */
+    text-align: left;
+    border: 1px solid #ddd; /* Bordure légère pour délimiter clairement les cellules */
+}
+th {
+    background-color: #32a852; /* Vert vif pour les en-têtes */
+    color: white;
+    font-size: 16px; /* Taille de police légèrement plus grande pour les en-têtes */
+}
+tr:nth-child(even) {
+    background-color: #fde8d7; /* Couleur douce pour les lignes paires */
+}
+tr:nth-child(odd) {
+    background-color: #fff; /* Blanc pour les lignes impaires */
+}
+tr:hover {
+    background-color: #70b880;
+}
+/* Ajout de styles pour améliorer l'accessibilité des liens ou des boutons dans la table, si nécessaire */
+a, button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    background-color: #32a852;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+a:hover, button:hover {
+    background-color: #2a6041;
+}
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

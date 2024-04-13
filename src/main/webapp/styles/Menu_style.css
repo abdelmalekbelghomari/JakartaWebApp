@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #005cbf;
+}
+
+button {
+    background-color: #005cbf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 20px;
+    text-align: justify;
+}
+
+.info-section p {
+    color: #2a6041;
+}
+
+.error-message {
+    color: #b30000;
+    font-weight: bold;
+}
+
+.success-message {
+    color: #32a852;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+form {
+    text-align: center;
+}

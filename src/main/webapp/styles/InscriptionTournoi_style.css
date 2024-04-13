@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333; /* General text color for better readability */
+}
+h2 {
+    color: #2a6041; /* Dark green for the title */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px; /* Adds space between the title and the table */
+}
+table {
+    width: 80%;
+    margin: 20px auto; /* Centers the table with some space on top and bottom */
+    border-collapse: collapse; /* Eliminates the space between the borders of the cells */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a slight shadow under the table for a depth effect */
+}
+th, td {
+    padding: 12px 15px; /* Generous internal spacing for better reading */
+    text-align: left;
+    border: 1px solid #ddd; /* Light border to clearly delineate the cells */
+}
+th {
+    background-color: #32a852; /* Bright green for headers */
+    color: white;
+    font-size: 16px; /* Slightly larger font size for headers */
+}
+tr:nth-child(even) {
+    background-color: #fde8d7; /* Soft color for even rows */
+}
+tr:nth-child(odd) {
+    background-color: #fff; /* White for odd rows */
+}
+tr:hover {
+    background-color: #70b880; /* Lighter green for hover */
+}
+input[type="submit"] {
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    background-color: #32a852;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #2a6041; /* Darker green on hover */
+}
